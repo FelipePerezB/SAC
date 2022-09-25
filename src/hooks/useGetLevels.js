@@ -12,7 +12,7 @@ const levels = [
     levels: [
       {
         id: 1,
-        type: "Altern ativa múltiple",
+        type: "Alternativa múltiple",
         description: "If everyone agrees, ____ go to France next month",
         options: [
           {
