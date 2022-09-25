@@ -24,7 +24,7 @@ const GetLifes = () => {
         <div className={styles["container"]}>
           <h2>¡TE QUEDASTE SIN VIDAS!</h2>
           <div className={styles["image-container"]}>
-            <Image src={duck} />
+            <Image alt={"sad duck"} src={duck} />
           </div>
           <Button
             type={"primary"}

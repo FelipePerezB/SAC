@@ -3,7 +3,7 @@ import React from "react";
 import styles from "@styles/button.module.css";
 
 const Button = ({ type, action, callback, text, url = "/" }) => {
-  const a = ["a"];
+  const a = [""];
   return a.map((e) => {
     return action === "link" ? (
       <>
@@ -14,8 +14,8 @@ const Button = ({ type, action, callback, text, url = "/" }) => {
         </Link>
       </>
     ) : (
-      <div onClick={()=>callback()} className={styles[type]}>
-        <span>{text}</span>
+      <div onClick={() => callback()} className={styles[type]}>
+        <span>{text + e}</span>
       </div>
     );
   });

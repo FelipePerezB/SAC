@@ -1,32 +1,34 @@
-import Layout from "layouts/Layout";
 import AppContext from "context/appContext";
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
-    const { state, setTimer } = useContext(AppContext);
-    let levelNumber = 0;
+  const { state, setTimer } = useContext(AppContext);
+  let levelNumber = 0;
   return (
     <>
       <h1>FIRST CONDITIONAL</h1>
 
       <div className={styles["levels"]}>
         {state.levels.map((level) => {
-          const isCompleted = state.completedLevels.some((id)=>id===level?.settings?.id);
+          const isCompleted = state.completedLevels.some(
+            (id) => id === level?.settings?.id
+          );
           const containerClass = isCompleted
             ? "levelCompleted"
             : "levelIncompleted";
           levelNumber++;
+          var url = "";
           if (state.user.lives <= 0) {
-            var url = "/GetLifes";
+            url = "/GetLifes";
           } else if (!isCompleted) {
-            var url = `/exercise/${level?.settings?.id}`;
+            url = `/exercise/${level?.settings?.id}`;
           } else {
-            var url = "";
+            url = "";
           }
           return (
-            <Link href={url}>
+            <Link key={levelNumber} href={url}>
               <div
                 onClick={() => setTimer()}
                 className={styles[containerClass]}

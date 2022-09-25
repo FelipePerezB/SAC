@@ -1,21 +1,14 @@
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import levels from "./useGetLevels";
 
 const initialState = {
-  completedLevels:[],
+  completedLevels: [],
   levels: levels,
   user: {
     lives: 10,
     navarState: "home",
   },
-  // actualLevel: {
-  //   number: 0,
-  //   name: "",
-  //   errors: 0,
-  //   corrects: 0,
-  //   time: "",
-  // },
 };
 
 const useInitialState = () => {
@@ -61,7 +54,7 @@ const useInitialState = () => {
         finalSeconds = "0" + finalSeconds;
       }
       const finalTime = `${finalMinutes}:${finalSeconds}`;
-      return(finalTime)
+      return finalTime;
     } else {
       const date = new Date();
       const seconds = date.getSeconds();
@@ -87,7 +80,7 @@ const useInitialState = () => {
               ...level,
               settings: {
                 ...level.settings,
-                errors: level.settings.errors += 1,
+                errors: (level.settings.errors += 1),
               },
             };
           } else {
@@ -144,53 +137,26 @@ const useInitialState = () => {
         },
         levels: state.levels.map((level) => {
           if (level.settings.id === id) {
-            state.completedLevels.push(id)
-              return {
-                ...level,
-                settings: {
-                  ...level.settings,
-                  number: 0,
-                  time:"",
-                  errors: 0,
-                  corrects: 0,
-                },
-              };
-            } else {
-              return {
-                ...level,
-              };
-            }
-          }),
+            state.completedLevels.push(id);
+            return {
+              ...level,
+              settings: {
+                ...level.settings,
+                number: 0,
+                time: "",
+                errors: 0,
+                corrects: 0,
+              },
+            };
+          } else {
+            return {
+              ...level,
+            };
+          }
+        }),
       });
     });
   };
-
-  // const resetLevel = () => {
-  //   setTimeout(() => {
-  //     setState({
-  //       ...state,
-  //       actualLevel: {
-  //         ...state.actualLevel,
-  //         number: 0,
-  //         name: "",
-  //         errors: 0,
-  //         corrects: 0,
-  //         time: "",
-  //       },
-  //     });
-  //   }, 1000);
-  // };
-
-  // const setActualGame = (id) => {
-  //   setState({
-  //     ...state,
-  //     actualLevel: {
-  //       ...state.actualLevel,
-  //       name:id
-  //     },
-
-  //   })
-  //   }
 
   const changeNavState = (newState) => {
     setTimeout(() => {
@@ -204,9 +170,9 @@ const useInitialState = () => {
     });
   };
 
-  setTimeout(()=>{
-    console.log(state)
-  })
+  setTimeout(() => {
+    console.log(state);
+  });
   return {
     state,
     setState,

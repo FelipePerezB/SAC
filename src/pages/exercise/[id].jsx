@@ -1,11 +1,8 @@
-import Layout from "layouts/Layout";
 import React, { useContext, useEffect, useState } from "react";
 import PairedTerms from "containers/PairedTerms";
 import MultipleChoice from "containers/MultipleChoice";
 import styles from "@styles/pairedTerms.module.css";
 import AppContext from "context/appContext";
-import Link from "next/link";
-import Victory from "@containers/Victory";
 import { useRouter } from "next/router";
 import GameLayout from "layouts/GameLayout";
 import Head from "next/head";
@@ -42,9 +39,10 @@ const Exercise = () => {
         <div className={styles["game-container"]}>
           {games?.levels?.map((game) => {
             const gameIndex = games.levels.findIndex((g) => g.id === game.id);
+            var element = "";
             switch (game.type) {
               case "Alternativa múltiple":
-                var element = (
+                element = (
                   <MultipleChoice
                     levelSettings={games?.settings}
                     settings={game.options}
@@ -52,14 +50,12 @@ const Exercise = () => {
                 );
                 break;
               case "términos pareados":
-                var element = (
+                element = (
                   <PairedTerms
                     levelSettings={games?.settings}
                     settings={game.options}
                   />
                 );
-              default:
-                break;
             }
 
             if (games.levels[actualGame] === games.levels[gameIndex]) {

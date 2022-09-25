@@ -4,11 +4,11 @@ import styles from "@styles/victory.module.css";
 import React, { useContext, useEffect, useState } from "react";
 
 const Victory = ({ id, settings }) => {
-  const { state, setCompleteLevel, setTimer } = useContext(AppContext);
+  const { setCompleteLevel, setTimer } = useContext(AppContext);
   const [time, setTime] = useState("");
   useEffect(() => {
     setTimeout(() => setTime(setTimer(id)));
-  }, []);
+  });
   const router = useRouter();
 
   const completeLevel = () => {

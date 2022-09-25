@@ -1,12 +1,10 @@
 import React, { useContext, useState } from "react";
 import styles from "@styles/layout.module.css";
 import Infovar from "@components/Infovar";
-import Image from "next/image";
 import AppContext from "context/appContext";
-// import home from "@assets/home.svg"
-//
+
 const Layout = ({ children, type = "layout" }) => {
-  const {state, changeNavState} = useContext(AppContext)
+  const { changeNavState } = useContext(AppContext);
   const [icons, setIcons] = useState([
     {
       type: "home",
@@ -16,33 +14,33 @@ const Layout = ({ children, type = "layout" }) => {
       type: "magic",
       state: "icon-inactive",
     },
-  ])
+  ]);
   const activeIcon = (type, state) => {
-    if(state!=="icon-active"){
-      setTimeout(()=>{
+    if (state !== "icon-active") {
+      setTimeout(() => {
         setIcons([
-          ...icons.map((icon)=>{
-            if(type===icon.type){
-              setTimeout(()=>{
-                changeNavState(type)
-              })
-              return{
+          ...icons.map((icon) => {
+            if (type === icon.type) {
+              setTimeout(() => {
+                changeNavState(type);
+              });
+              return {
                 ...icon,
-                state:"icon-active"
-              }
-            } else{
-              if(icon?.state==="icon-active"){
-                return{
+                state: "icon-active",
+              };
+            } else {
+              if (icon?.state === "icon-active") {
+                return {
                   ...icon,
-                  state:"icon-inactive"
-                }
+                  state: "icon-inactive",
+                };
               }
-            }          
-          })
-        ])
-      })
+            }
+          }),
+        ]);
+      });
     }
-  }
+  };
   return (
     <div className={styles[type]}>
       <Infovar />
@@ -51,7 +49,10 @@ const Layout = ({ children, type = "layout" }) => {
         <ul>
           {icons.map((icon) => {
             return (
-              <li onClick={()=>activeIcon(icon.type, icon.state)}>
+              <li
+                key={icon.type}
+                onClick={() => activeIcon(icon.type, icon.state)}
+              >
                 {icon?.type === "home" ? (
                   <svg
                     className={styles[icon?.state]}

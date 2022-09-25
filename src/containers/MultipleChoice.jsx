@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-// import styles from "@styles/pairedTerms.module.css";
+import React, { useContext, useState } from "react";
 import styles from "@styles/multipleChoice.module.css";
 import AppContext from "context/appContext";
 const MultipleChoice = ({ settings, levelSettings }) => {
@@ -46,7 +45,7 @@ const MultipleChoice = ({ settings, levelSettings }) => {
       <div className={styles["options"]}>
         {options?.map((op) => {
           return (
-            <span onClick={() => check(op)} className={styles[op.state]}>
+            <span key={op.text} onClick={() => check(op)} className={styles[op.state]}>
               <span>{op.text}</span>
             </span>
           );

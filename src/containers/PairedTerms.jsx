@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import styles from "@styles/pairedTerms.module.css";
 import AppContext from "context/appContext";
 const PairedTerms = ({ settings, levelSettings }) => {
-  const {changeLevel, addError, addCorrect} = useContext(AppContext)
+  const { changeLevel, addError, addCorrect } = useContext(AppContext);
   const [answers, setAnswers] = useState([]);
   const [options, setOptions] = useState(settings);
   const [pair, setPair] = useState({
@@ -29,10 +29,10 @@ const PairedTerms = ({ settings, levelSettings }) => {
       setData(
         array.map((e) => {
           if (e[array_key] === pair[pair_key] && e.state !== "correct") {
-            if(newState==="incorrect" && array_key==="answer"){
-              setTimeout(()=>{
-                addError(levelSettings.id)
-              })
+            if (newState === "incorrect" && array_key === "answer") {
+              setTimeout(() => {
+                addError(levelSettings.id);
+              });
             }
             return {
               ...e,
@@ -79,7 +79,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
       };
     });
     setAnswers(shuffle(answersList));
-  }, []);
+  });
 
   useEffect(() => {
     if (pair.answer && pair.option) {
@@ -89,12 +89,12 @@ const PairedTerms = ({ settings, levelSettings }) => {
         setTimeout(() => {
           const win = options.filter((e) => e.state !== "correct");
           if (win.length <= 1) {
-            setTimeout(()=>{
+            setTimeout(() => {
               changeLevel(levelSettings.id);
-            })
-            setTimeout(()=>{
-              addCorrect(levelSettings.id)
-            })
+            });
+            setTimeout(() => {
+              addCorrect(levelSettings.id);
+            });
           }
         });
       } else {
@@ -127,6 +127,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
           {options.map((op) => {
             return (
               <span
+                key={op.text}
                 className={styles[op.state]}
                 onClick={() => setPair({ ...pair, option: op.answer })}
               >
@@ -139,6 +140,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
           {answers.map((ans) => {
             return (
               <span
+                key={ans.text}
                 className={styles[ans.state]}
                 onClick={() => setPair({ ...pair, answer: ans.text })}
               >

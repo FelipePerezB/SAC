@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "@styles/gameLayout.module.css";
 import Victory from "@containers/Victory";
-import Infovar from "@components/Infovar";
 import Layout from "./Layout";
 
 const GameLayout = ({ children, settings }) => {
-  const layout = settings.isFinalGame ? "layout-without-ui" : "layout-without-nav"
+  const layout = settings.isFinalGame
+    ? "layout-without-ui"
+    : "layout-without-nav";
   return (
     <>
       <Layout type={layout}>
