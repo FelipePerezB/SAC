@@ -79,7 +79,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
       };
     });
     setAnswers(shuffle(answersList));
-  });
+  }, []);
 
   useEffect(() => {
     if (pair.answer && pair.option) {
