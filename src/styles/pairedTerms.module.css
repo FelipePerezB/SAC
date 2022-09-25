@@ -19,7 +19,8 @@
     gap: 1rem;
     display: flex;
     place-content: center;
-    /* justify-content: space-between; */
+    color: var(--main-color);
+    font-weight: 500;
 }
 
 .table .options, .table .answers{
