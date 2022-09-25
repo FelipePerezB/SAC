@@ -1,0 +1,88 @@
+.question{
+    /* margin: 4vh 0; */
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    height: calc(100vh - 10rem);
+}
+
+.table{
+    margin: auto;
+    padding: 2rem 0;
+    gap: 1rem;
+    display: flex;
+    place-content: center;
+    /* justify-content: space-between; */
+}
+
+.table .options, .table .answers{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.options > *, .answers > *{
+    text-align: center;
+    border-radius: 8px;
+    display: inline-block;
+    background-color: var(--inactive-color);
+    height: 4rem;
+    width: 100%;
+    max-width: 12rem;
+    padding: 0.4rem;
+}
+
+.correct, .incorrect,.unselect, .select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 
+.table{
+    text-align: center;
+    margin: auto;
+    border-spacing: 1rem;
+    /* width: 100%; */
+
+/* .table td{
+    padding: 0.5rem;
+    border-spacing: 2rem;
+    border-radius: 10px;
+    width: 40vw;
+    height: 4.5rem;
+    background-color: white;
+} */
+
+.table span{
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+.table .unselect:hover{
+    /* background-color: lightgray; */
+    transition: background-color 1s;
+}
+
+.table .incorrect{
+    background-color: var(--incorrect);
+}
+
+.table .correct{
+    transition: background-color 0.3s;
+    background-color: var(--correct);
+}
+
+.table .select{
+    background-color: gray;
+}

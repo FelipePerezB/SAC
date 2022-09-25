@@ -1,0 +1,62 @@
+:root{
+  /* COLORS */
+  --main-color: #0E274E;
+  --dark-main-color: #05142c;
+  --soft-main-color:#5170a1;
+  --secondary-color: #ECDD83;
+  --correct: #32CF88;
+  --incorrect: #F85555;
+  --inactive-color: white;
+  /* --secondary-color--active: #f7e373; */
+  /* HEIGHS */
+  --level-heigh: 25vw;
+  --infovar-heigh: 5rem;
+  --navar-heigh: 4rem
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1, h2{
+  color: var(--inactive-color);
+  text-align: center;
+  margin: 5vh 0 5vh;
+}
+
+h1{
+  font-size: 2.4rem;
+}
+h2{
+  font-size: 2rem;
+}
+
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}

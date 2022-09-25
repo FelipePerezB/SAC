@@ -1,0 +1,63 @@
+.infovar, .game-infovar{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    height: var(--infovar-heigh);
+    border-bottom: 3px solid var(--inactive-color);
+}
+
+.game-infovar{
+    border-bottom: none;
+}
+
+.victory-infovar{
+    display: none;
+}
+
+.infovar-elements{
+    padding: 0.5rem 2rem;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 26rem;
+}
+
+.avatar{
+    overflow: hidden;
+    z-index: 10000;
+    background-color: white;
+    aspect-ratio: 1 / 1;
+    height: 80%;
+    border-radius: 100%;
+    outline: 4px solid var(--dark-main-color);
+}
+
+.lives{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: t; */
+}
+
+.heart-container{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    width: 2rem;
+    /* object-fit: contain; */
+    /* aspect-ratio: 1/1; */
+}
+
+
+.lives span{
+    color: var(--inactive-color);
+    font-size: 2rem;
+}

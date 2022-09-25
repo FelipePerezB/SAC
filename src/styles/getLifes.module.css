@@ -1,0 +1,17 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container{
+    aspect-ratio: 1/1;
+    display: flex;
+    border-radius: 10px;
+    margin: 2rem 0;
+    height: 35vh;
+    max-height: 30rem;
+    background-color: white;
+    overflow: hidden;
+}

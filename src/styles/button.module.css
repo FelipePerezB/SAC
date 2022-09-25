@@ -1,0 +1,29 @@
+.primary,
+.secundary {
+  max-width: 24rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+  width: calc(100% - 2rem);
+  height: 10vh;
+  min-height: 2.5rem;
+  max-height: 4.5rem;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  color: var(--main-color);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.primary {
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  bottom: calc(10vh + 2rem);
+}
+
+.secundary {
+  background-color: var(--main-color);
+  color: var(--inactive-color);
+}

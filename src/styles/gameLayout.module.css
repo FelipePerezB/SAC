@@ -1,0 +1,52 @@
+.layout{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-color);
+    padding: calc(var(--infovar-heigh) + 1rem) 1rem 1rem;
+}
+
+.main-content{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 28rem;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar{
+    position: absolute;
+    z-index: 10000;
+    background-color: white;
+    top: 2em;
+    width: 3.2rem;
+    height: 3.2em;
+    border-radius: 100%;
+}
+
+.progress-var{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 22rem;
+    border-radius: 16px;
+    height: 16px;
+    background-color: var(--inactive-color);
+    overflow: hidden;
+}
+
+.progress{
+    transition:all 1s ease-out;
+    width: 0%;
+    height: 100%;
+    background-color: var(--secondary-color);
+}
+
+.game-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
