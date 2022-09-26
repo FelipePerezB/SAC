@@ -35,7 +35,7 @@ const Victory = ({ id, settings }) => {
           </span>
         </div>
         <span className={styles["time"]}>
-          <span className={styles["text"]}>TIME</span>
+          <span className={styles["text"]}>TIEMPO</span>
           <span className={styles["number"]}>{time}</span>
         </span>
       </div>
