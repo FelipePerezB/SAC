@@ -578,6 +578,47 @@ const levels = [
       },
     ],
   },
+  {
+    settings: {
+      id: "HQUIH",
+      totalLevels: 1,
+      title:"TEST",
+      number: 0,
+      time:"",
+      corrects:0,
+      errors:0,
+    },
+    levels:[
+      {
+        id: 1,
+        type: "Alternativa múltiple",
+        description: "test",
+        options: [
+          {
+            text: "1",
+            isCorrect: true,
+            state: "unselect",
+          },
+          {
+            text: "2",
+            isCorrect: false,
+            state: "unselect",
+          },
+          {
+            text: "3",
+            isCorrect: false,
+            state: "unselect",
+          },
+          {
+            text: "4",
+            isCorrect: false,
+            state: "unselect",
+          },
+        ],
+      },
+
+    ]
+  }
 
 ];
 export default levels;

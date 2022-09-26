@@ -169,10 +169,6 @@ const useInitialState = () => {
       });
     });
   };
-
-  setTimeout(() => {
-    console.log(state);
-  });
   return {
     state,
     setState,
