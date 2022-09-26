@@ -205,7 +205,7 @@ const levels = [
     settings: {
       id: "HUAHDUIHW",
       totalLevels: 7,
-      title:"ORACIONES EN NEGATIVO Y PREGUNTAS",
+      title:"NEGATIVO E INTERROGATIVO",
       number: 0,
       time:"",
       corrects:0,
