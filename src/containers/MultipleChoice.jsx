@@ -3,7 +3,7 @@ import styles from "@styles/multipleChoice.module.css";
 import AppContext from "context/appContext";
 const MultipleChoice = ({ settings, levelSettings }) => {
   const [options, setOptions] = useState(settings);
-  const { changeLevel, addError, addCorrect } = useContext(AppContext);
+  const { addError, addCorrect } = useContext(AppContext);
 
   const changeState = (text, newState) => {
     setOptions(
@@ -26,11 +26,8 @@ const MultipleChoice = ({ settings, levelSettings }) => {
     if (op.isCorrect) {
       changeState(op.text, "correct");
       setTimeout(() => {
-        changeLevel(levelSettings.id);
-      }, 100);
-      setTimeout(() => {
         addCorrect(levelSettings.id);
-      });
+      }, 500);
     } else {
       changeState(op.text, "incorrect");
       setTimeout(() => {
@@ -45,7 +42,11 @@ const MultipleChoice = ({ settings, levelSettings }) => {
       <div className={styles["options"]}>
         {options?.map((op) => {
           return (
-            <span key={op.text} onClick={() => check(op)} className={styles[op.state]}>
+            <span
+              key={op.text}
+              onClick={() => check(op)}
+              className={styles[op.state]}
+            >
               <span>{op.text}</span>
             </span>
           );

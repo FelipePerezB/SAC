@@ -17,7 +17,7 @@ const Victory = ({ id, settings }) => {
   };
   return (
     <div className={styles["container"]}>
-      <h2 onClick={() => completeLevel()}>!NIVEL COMPLETADO!</h2>
+      <h2 onClick={() => completeLevel()}>¡NIVEL COMPLETADO!</h2>
       <div className={styles["video-container"]}>
         <video autoPlay loop>
           <source src="/victory.mp4" />

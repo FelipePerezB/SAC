@@ -4,7 +4,7 @@ import { useContext } from "react";
 import styles from "../styles/Home.module.css";
 
 const Home = () => {
-  const { state, setTimer } = useContext(AppContext);
+  const { state } = useContext(AppContext);
   let levelNumber = 0;
   return (
     <>
@@ -30,7 +30,6 @@ const Home = () => {
           return (
             <Link key={levelNumber} href={url}>
               <div
-                onClick={() => setTimer()}
                 className={styles[containerClass]}
               >
                 <div className={styles["level-number"]}>

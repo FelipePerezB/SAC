@@ -3,11 +3,11 @@ const levels = [
     settings: {
       id: "HAGWUY",
       totalLevels: 7,
-      title:"INTRODUCCIÓN",
-      number:0,
-      time:"",
-      corrects:0,
-      errors:0,
+      title: "INTRODUCCIÓN",
+      number: 0,
+      time: "",
+      corrects: 0,
+      errors: 0,
     },
     levels: [
       {
@@ -148,7 +148,8 @@ const levels = [
       {
         id: 6,
         type: "Alternativa múltiple",
-        description: "¿Cuál de las siguientes oraciones está redactada correctamente?",
+        description:
+          "¿Cuál de las siguientes oraciones está redactada correctamente?",
         options: [
           {
             text: "If the weather is nice, we'll will play tennis",
@@ -205,11 +206,11 @@ const levels = [
     settings: {
       id: "HUAHDUIHW",
       totalLevels: 7,
-      title:"NEGATIVO E INTERROGATIVO",
+      title: "NEGATIVO E INTERROGATIVO",
       number: 0,
-      time:"",
-      corrects:0,
-      errors:0,
+      time: "",
+      corrects: 0,
+      errors: 0,
     },
     levels: [
       {
@@ -323,7 +324,8 @@ const levels = [
       {
         id: 5,
         type: "Alternativa múltiple",
-        description: "¿Cuál de las siguientes oraciones está redactada correctamente?",
+        description:
+          "¿Cuál de las siguientes oraciones está redactada correctamente?",
         options: [
           {
             text: "If the weather won't improve, we won't have a picnic",
@@ -407,11 +409,11 @@ const levels = [
     settings: {
       id: "HKEBKCEBHJN",
       totalLevels: 6,
-      title:"PRÁCTICA",
+      title: "PRÁCTICA",
       number: 0,
-      time:"",
-      corrects:0,
-      errors:0,
+      time: "",
+      corrects: 0,
+      errors: 0,
     },
     levels: [
       {
@@ -525,7 +527,8 @@ const levels = [
       {
         id: 5,
         type: "Alternativa múltiple",
-        description: "¿Cuál de las siguientes oraciones está redactada correctamente?",
+        description:
+          "¿Cuál de las siguientes oraciones está redactada correctamente?",
         options: [
           {
             text: "If I won't feel sick, I will go tomorrow",

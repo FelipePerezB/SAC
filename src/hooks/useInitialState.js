@@ -104,6 +104,7 @@ const useInitialState = () => {
             settings: {
               ...level.settings,
               corrects: (level.settings.corrects += 1),
+              number: level.settings.number += 1
             },
           };
         } else {

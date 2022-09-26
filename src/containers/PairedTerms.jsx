@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import styles from "@styles/pairedTerms.module.css";
 import AppContext from "context/appContext";
 const PairedTerms = ({ settings, levelSettings }) => {
-  const { changeLevel, addError, addCorrect } = useContext(AppContext);
+  const { addError, addCorrect } = useContext(AppContext);
   const [answers, setAnswers] = useState([]);
   const [options, setOptions] = useState(settings);
   const [pair, setPair] = useState({
@@ -90,11 +90,8 @@ const PairedTerms = ({ settings, levelSettings }) => {
           const win = options.filter((e) => e.state !== "correct");
           if (win.length <= 1) {
             setTimeout(() => {
-              changeLevel(levelSettings.id);
-            });
-            setTimeout(() => {
               addCorrect(levelSettings.id);
-            });
+            }, 500);
           }
         });
       } else {

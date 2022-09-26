@@ -8,17 +8,22 @@ import GameLayout from "layouts/GameLayout";
 import Head from "next/head";
 
 const Exercise = () => {
-  const { state } = useContext(AppContext);
+  const { state, setTimer } = useContext(AppContext);
   const [games, setGames] = useState();
   const [id, setId] = useState(null);
   const router = useRouter();
+
+  useEffect(() => {
+    setTimer();
+  }, [router?.isReady]);
+
   useEffect(() => {
     const { id } = router.query;
     setId(id);
     setTimeout(() => {
       setGames(state.levels.find((level) => level.settings.id === id));
     });
-  }, [router?.isReady]);
+  }, [router?.isReady, state?.levels]);
 
   let actualGame = games?.settings?.number;
   let progress = Math.round((100 / games?.settings?.totalLevels) * actualGame);
