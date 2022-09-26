@@ -96,9 +96,3 @@
     font-size: 2rem;
     text-align: center;
 }
-
-@media (max-height:580px){
-    .video-container{
-        display: none;
-    }
-}
