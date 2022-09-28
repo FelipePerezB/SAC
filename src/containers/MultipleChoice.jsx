@@ -32,7 +32,7 @@ const MultipleChoice = ({ settings, levelSettings }) => {
       changeState(op.text, "incorrect");
       setTimeout(() => {
         changeState(op.text, "unselect");
-      }, 1000);
+      }, 300);
       addError(levelSettings.id);
     }
   };

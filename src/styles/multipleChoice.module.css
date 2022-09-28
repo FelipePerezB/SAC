@@ -49,6 +49,7 @@
 
 .incorrect{
     background-color: var(--incorrect);
+    transition: background-color 0.3s;
 }
 
 .correct{

@@ -18,7 +18,9 @@ const GameLayout = ({ children, settings }) => {
               <div
                 style={{ width: `${settings.progress}%` }}
                 className={styles["progress"]}
-              ></div>
+              >
+                <div className={styles["progress-decoration"]}></div>
+              </div>
             </div>
             {children}
           </div>

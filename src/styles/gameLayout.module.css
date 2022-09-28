@@ -37,10 +37,15 @@
 }
 
 .progress{
-    transition:all 1s ease-out;
+    transition: width 1s ease-out;
     width: 0%;
     height: 100%;
     background-color: var(--secondary-color);
+    border-radius: 16px;
+}
+
+.progress-decoration{
+    background-color: white;
 }
 
 .game-container{

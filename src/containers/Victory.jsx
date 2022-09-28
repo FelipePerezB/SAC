@@ -21,6 +21,7 @@ const Victory = ({ id, settings }) => {
       <div className={styles["video-container"]}>
         <video autoPlay loop>
           <source src="/victory.mp4" />
+          <source src="/victory.hevc.mp4" />
         </video>
       </div>
       <div className={styles["stats"]}>

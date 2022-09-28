@@ -47,23 +47,6 @@
     justify-content: center;
 }
 
-
-/* 
-.table{
-    text-align: center;
-    margin: auto;
-    border-spacing: 1rem;
-    /* width: 100%; */
-
-/* .table td{
-    padding: 0.5rem;
-    border-spacing: 2rem;
-    border-radius: 10px;
-    width: 40vw;
-    height: 4.5rem;
-    background-color: white;
-} */
-
 .table span{
     transition: background-color 0.5s;
     cursor: pointer;
@@ -76,6 +59,7 @@
 
 .table .incorrect{
     background-color: var(--incorrect);
+    transition: background-color 300ms ease-in;
 }
 
 .table .correct{

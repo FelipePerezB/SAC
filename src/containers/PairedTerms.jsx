@@ -100,7 +100,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
         setTimeout(() => {
           check(setOptions, options, "answer", "option", "unselect");
           check(setAnswers, answers, "text", "answer", "unselect");
-        }, 1500);
+        }, 500);
       }
       setPair({
         answer: null,

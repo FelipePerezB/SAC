@@ -405,181 +405,216 @@ const levels = [
       },
     ],
   },
-  {
-    settings: {
-      id: "HKEBKCEBHJN",
-      totalLevels: 6,
-      title: "PRÁCTICA",
-      number: 0,
-      time: "",
-      corrects: 0,
-      errors: 0,
-    },
-    levels: [
-      {
-        id: 1,
-        type: "Alternativa múltiple",
-        description: "You won't go to the party ____ they don't invite you",
-        options: [
-          {
-            text: "If",
-            isCorrect: true,
-            state: "unselect",
-          },
-          {
-            text: "Will",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "Won't",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "Do",
-            isCorrect: false,
-            state: "unselect",
-          },
-        ],
-      },
-      {
-        id: 2,
-        type: "Alternativa múltiple",
-        description: "_____ succes if she try hard",
-        options: [
-          {
-            text: "Do",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "If she",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "She will",
-            isCorrect: true,
-            state: "unselect",
-          },
-          {
-            text: "I",
-            isCorrect: false,
-            state: "unselect",
-          },
-        ],
-      },
-      {
-        id: 3,
-        type: "Alternativa múltiple",
-        description: "____ I pass the exan, I ____ celebrate",
-        options: [
-          {
-            text: "If / Will",
-            isCorrect: true,
-            state: "unselect",
-          },
-          {
-            text: "Will / If",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "Do / Will",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "If / Do",
-            isCorrect: false,
-            state: "unselect",
-          },
-        ],
-      },
-      {
-        id: 4,
-        type: "términos pareados",
-        description: "Une las oraciones",
-        options: [
-          {
-            state: "unselect",
-            text: "If it rains",
-            answer: "I won't go to the picnic",
-          },
-          {
-            state: "unselect",
-            text: "You won't go to the party tomorrow",
-            answer: "If you don't study today",
-          },
-          {
-            state: "unselect",
-            text: "If you don't leave",
-            answer: "I will call the police",
-          },
-          {
-            state: "unselect",
-            text: "If I don't hurry up",
-            answer: "I will miss the bus",
-          },
-        ],
-      },
-      {
-        id: 5,
-        type: "Alternativa múltiple",
-        description:
-          "¿Cuál de las siguientes oraciones está redactada correctamente?",
-        options: [
-          {
-            text: "If I won't feel sick, I will go tomorrow",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "If I don't feel sick, I go tomorrow",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "I don't feel sick, I will go tomorrow",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "If I don't feel sick, I will go tomorrow",
-            isCorrect: true,
-            state: "unselect",
-          },
-        ],
-      },
-      {
-        id: 6,
-        type: "Alternativa múltiple",
-        description: "_____ he do if he runs out of time?",
-        options: [
-          {
-            text: "What will",
-            isCorrect: true,
-            state: "unselect",
-          },
-          {
-            text: "Will",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "What",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "Do will",
-            isCorrect: false,
-            state: "unselect",
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   settings: {
+  //     id: "HKEBKCEBHJN",
+  //     totalLevels: 6,
+  //     title: "PRÁCTICA",
+  //     number: 0,
+  //     time: "",
+  //     corrects: 0,
+  //     errors: 0,
+  //   },
+  //   levels: [
+  //     {
+  //       id: 1,
+  //       type: "Alternativa múltiple",
+  //       description: "You won't go to the party ____ they don't invite you",
+  //       options: [
+  //         {
+  //           text: "If",
+  //           isCorrect: true,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Will",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Won't",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Do",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: 2,
+  //       type: "Alternativa múltiple",
+  //       description: "_____ succes if she try hard",
+  //       options: [
+  //         {
+  //           text: "Do",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "If she",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "She will",
+  //           isCorrect: true,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "I",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: 3,
+  //       type: "Alternativa múltiple",
+  //       description: "____ I pass the exan, I ____ celebrate",
+  //       options: [
+  //         {
+  //           text: "If / Will",
+  //           isCorrect: true,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Will / If",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Do / Will",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "If / Do",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: 4,
+  //       type: "términos pareados",
+  //       description: "Une las oraciones",
+  //       options: [
+  //         {
+  //           state: "unselect",
+  //           text: "If it rains",
+  //           answer: "I won't go to the picnic",
+  //         },
+  //         {
+  //           state: "unselect",
+  //           text: "You won't go to the party tomorrow",
+  //           answer: "If you don't study today",
+  //         },
+  //         {
+  //           state: "unselect",
+  //           text: "If you don't leave",
+  //           answer: "I will call the police",
+  //         },
+  //         {
+  //           state: "unselect",
+  //           text: "If I don't hurry up",
+  //           answer: "I will miss the bus",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: 5,
+  //       type: "Alternativa múltiple",
+  //       description:
+  //         "¿Cuál de las siguientes oraciones está redactada correctamente?",
+  //       options: [
+  //         {
+  //           text: "If I won't feel sick, I will go tomorrow",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "If I don't feel sick, I go tomorrow",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "I don't feel sick, I will go tomorrow",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "If I don't feel sick, I will go tomorrow",
+  //           isCorrect: true,
+  //           state: "unselect",
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       id: 6,
+  //       type: "Alternativa múltiple",
+  //       description: "_____ he do if he runs out of time?",
+  //       options: [
+  //         {
+  //           text: "What will",
+  //           isCorrect: true,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Will",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "What",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Do will",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
+  // {
+  //   settings: {
+  //     id: "BQIHD",
+  //     totalLevels: 1,
+  //     title: "TEST",
+  //     number: 0,
+  //     time: "",
+  //     corrects: 0,
+  //     errors: 0,
+  //   },
+  //   levels: [
+  //     {
+  //       id: 1,
+  //       type: "Alternativa múltiple",
+  //       description: "You won't go to the party ____ they don't invite you",
+  //       options: [
+  //         {
+  //           text: "If",
+  //           isCorrect: true,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Will",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //         {
+  //           text: "Won't",
+  //           isCorrect: false,
+  //           state: "unselect",
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
 ];
 export default levels;

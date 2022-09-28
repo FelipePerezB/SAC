@@ -8,7 +8,7 @@
     width: 100%;
     background-color: var(--main-color);
     height: var(--infovar-heigh);
-    border-bottom: 3px solid var(--inactive-color);
+    border-bottom: 2px solid var(--inactive-color);
 }
 
 .game-infovar{
@@ -32,31 +32,30 @@
 
 .avatar{
     overflow: hidden;
+    display: flex;
     z-index: 10000;
     background-color: white;
-    aspect-ratio: 1 / 1;
     height: 3rem;
     width: 3rem;
     border-radius: 100%;
     outline: 4px solid var(--dark-main-color);
 }
 
+.avatar img{
+    transform: scale(0.9);
+}
+
 .lives{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: t; */
 }
 
-.heart-container{
-    display: flex;
-    align-items: center;
-    height: 2rem;
-    width: 2rem;
-    /* object-fit: contain; */
-    /* aspect-ratio: 1/1; */
+.lives svg{
+    stroke-width: 3px;
+    margin: 0 auto;
+    transform: scale(0.8);
 }
-
 
 .lives span{
     color: var(--inactive-color);

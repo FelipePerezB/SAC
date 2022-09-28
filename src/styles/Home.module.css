@@ -20,7 +20,8 @@
   max-height: 5.5rem;
   border-radius: 16px;
   cursor: pointer;
-  outline: 3px solid var(--dark-main-color);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.400);
+  font-weight: 600;
 }
 
 .levelCompleted{
@@ -52,5 +53,5 @@
 
 
 .levelCompleted:hover, .levelIncompleted:hover{
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.400);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.759);
 }
