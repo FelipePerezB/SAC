@@ -1,0 +1,29 @@
+.levels, .practice{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 22rem;
+    border-radius: 16px;
+    height: 16px;
+    background-color: var(--inactive-color);
+    overflow: hidden;
+}
+
+.practice{
+    width: calc(100% - 5rem);
+}
+
+.progress{
+    transition: width 1s ease-out;
+    width: 0%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+}
+
+.practice .progress{
+    background-color: #1485D8;
+}
+
+.progress-decoration{
+    background-color: white;
+}

@@ -1,0 +1,26 @@
+.game-info{
+    display: flex;
+    align-items: center;
+}
+
+.left-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--inactive-color);
+    width: max-content;
+    padding: 0.1rem;
+    background-color: var(--incorrect);
+    border-radius: 10px;
+}
+
+.left-game span{
+    transform: scale(0.8);
+    width: 3rem;
+    height: 3rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background: url("../assets/exit.svg");
+}
