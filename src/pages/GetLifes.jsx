@@ -22,20 +22,20 @@ const GetLifes = () => {
       </Head>
       <Layout type="layout-without-ui">
         <div className={styles["container"]}>
-          <h2>¡TE QUEDASTE SIN VIDAS!</h2>
+          <h2>GAME OVER</h2>
           <div className={styles["image-container"]}>
             <Image alt={"sad duck"} src={duck} />
           </div>
           <Button
             type={"primary"}
             callback={getLives}
-            text={"Recuperar vidas"}
+            text={"Get More Lifes"}
           />
           <Button
             type={"secundary"}
             action={"link"}
             url={"/"}
-            text={"Volver al home"}
+            text={"Home"}
           />
         </div>
       </Layout>

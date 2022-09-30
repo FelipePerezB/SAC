@@ -17,7 +17,7 @@ const Victory = ({ id, settings }) => {
   };
   return (
     <div className={styles["container"]}>
-      <h2 onClick={() => completeLevel()}>¡NIVEL COMPLETADO!</h2>
+      <h2 onClick={() => completeLevel()}>LEVEL COMPLETED!</h2>
       <div className={styles["video-container"]}>
         <video autoPlay loop>
           <source src="/victory.mp4" />
@@ -27,16 +27,16 @@ const Victory = ({ id, settings }) => {
       <div className={styles["stats"]}>
         <div>
           <span className={styles["errors"]}>
-            <span className={styles["text"]}>ERRORES</span>
+            <span className={styles["text"]}>ERRORS</span>
             <span className={styles["number"]}>{settings.errors}</span>
           </span>
           <span className={styles["corrects"]}>
-            <span className={styles["text"]}>CORRECTAS</span>
+            <span className={styles["text"]}>CORRECTS</span>
             <span className={styles["number"]}>{settings.corrects}</span>
           </span>
         </div>
         <span className={styles["time"]}>
-          <span className={styles["text"]}>TIEMPO</span>
+          <span className={styles["text"]}>TIME</span>
           <span className={styles["number"]}>{time}</span>
         </span>
       </div>
@@ -46,7 +46,7 @@ const Victory = ({ id, settings }) => {
         }}
         className={styles["button"]}
       >
-        <span>Continuar</span>
+        <span>Continue</span>
       </div>
     </div>
   );

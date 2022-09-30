@@ -34,6 +34,7 @@ const Exercise = () => {
         <title>Level | SAC</title>
       </Head>
       <GameLayout
+        type="level"
         settings={{
           others: games?.settings,
           levelId: id,
@@ -46,7 +47,7 @@ const Exercise = () => {
             const gameIndex = games.levels.findIndex((g) => g.id === game.id);
             var element = "";
             switch (game.type) {
-              case "Alternativa múltiple":
+              case "Multiple Choice":
                 element = (
                   <MultipleChoice
                     levelSettings={games?.settings}
@@ -54,7 +55,7 @@ const Exercise = () => {
                   />
                 );
                 break;
-              case "términos pareados":
+              case "match the sentences":
                 element = (
                   <PairedTerms
                     levelSettings={games?.settings}

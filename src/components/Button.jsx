@@ -2,10 +2,10 @@ import Link from "next/link";
 import React from "react";
 import styles from "@styles/button.module.css";
 
-const Button = ({ type, action, callback, text, url = "/" }) => {
+const Button = ({ type, callback, text, url}) => {
   const a = [""];
   return a.map((e) => {
-    return action === "link" ? (
+    return (url) ? (
       <>
         <Link href={url}>
           <div className={styles[type]}>

@@ -3,7 +3,7 @@ const levels = [
     settings: {
       id: "HAGWUY",
       totalLevels: 7,
-      title: "INTRODUCCIÓN",
+      title: "INTRODUCTION",
       number: 0,
       time: "",
       corrects: 0,
@@ -12,7 +12,7 @@ const levels = [
     levels: [
       {
         id: 1,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If everyone agrees, ____ go to France next month",
         options: [
           {
@@ -39,8 +39,8 @@ const levels = [
       },
       {
         id: 2,
-        type: "términos pareados",
-        description: "Une las oraciones",
+        type: "match the sentences",
+        description: "",
         options: [
           {
             state: "unselect",
@@ -66,7 +66,7 @@ const levels = [
       },
       {
         id: 3,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If the plane is delayed ______",
         options: [
           {
@@ -93,7 +93,7 @@ const levels = [
       },
       {
         id: 4,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If you invite me, I will ____",
         options: [
           {
@@ -120,7 +120,7 @@ const levels = [
       },
       {
         id: 5,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If I have time, ___ will study maths",
         options: [
           {
@@ -147,27 +147,26 @@ const levels = [
       },
       {
         id: 6,
-        type: "Alternativa múltiple",
-        description:
-          "¿Cuál de las siguientes oraciones está redactada correctamente?",
+        type: "Multiple Choice",
+        description: "If we ____ hurry we'll be late",
         options: [
           {
-            text: "If the weather is nice, we'll will play tennis",
+            text: "Won't",
             isCorrect: false,
             state: "unselect",
           },
           {
-            text: "If the weather is nice, we play tennis",
+            text: "Doesn't",
             isCorrect: false,
             state: "unselect",
           },
           {
-            text: "If the weather is nice, we'll  play tennis",
+            text: "Don't",
             isCorrect: true,
             state: "unselect",
           },
           {
-            text: "Will the weather is nice, if will play tennis",
+            text: "Do",
             isCorrect: false,
             state: "unselect",
           },
@@ -175,7 +174,7 @@ const levels = [
       },
       {
         id: 7,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If Max asks for the truth, I _____ what happend",
         options: [
           {
@@ -206,7 +205,7 @@ const levels = [
     settings: {
       id: "HUAHDUIHW",
       totalLevels: 7,
-      title: "NEGATIVO E INTERROGATIVO",
+      title: "NEGATIVE AND INTERROGATIVE",
       number: 0,
       time: "",
       corrects: 0,
@@ -215,7 +214,7 @@ const levels = [
     levels: [
       {
         id: 1,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If you ____ like the design, I will change it",
         options: [
           {
@@ -242,7 +241,7 @@ const levels = [
       },
       {
         id: 2,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "If it's too cold, Brian _____ go outside",
         options: [
           {
@@ -269,7 +268,7 @@ const levels = [
       },
       {
         id: 3,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "Who ____ be my manager if you resign?",
         options: [
           {
@@ -296,8 +295,8 @@ const levels = [
       },
       {
         id: 4,
-        type: "términos pareados",
-        description: "Une las oraciones",
+        type: "match the sentences",
+        description: "",
         options: [
           {
             state: "unselect",
@@ -323,27 +322,26 @@ const levels = [
       },
       {
         id: 5,
-        type: "Alternativa múltiple",
-        description:
-          "¿Cuál de las siguientes oraciones está redactada correctamente?",
+        type: "Multiple Choice",
+        description: "_______ you do if you win the lottery?",
         options: [
           {
-            text: "If the weather won't improve, we won't have a picnic",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: " If the weather doesn't improve, we doesn't have a picnic",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "If the weather doesn't improve, we won't have a picnic",
+            text: "What will",
             isCorrect: true,
             state: "unselect",
           },
           {
-            text: "Won't the weather doesn't improve, we will have a picnic",
+            text: "Will",
+            isCorrect: false,
+            state: "unselect",
+          },
+          {
+            text: "Do",
+            isCorrect: false,
+            state: "unselect",
+          },
+          {
+            text: "If",
             isCorrect: false,
             state: "unselect",
           },
@@ -351,7 +349,7 @@ const levels = [
       },
       {
         id: 6,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "I _____ answer If you call",
         options: [
           {
@@ -378,7 +376,7 @@ const levels = [
       },
       {
         id: 7,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "_____ cry if she watches this movie?",
         options: [
           {
@@ -409,7 +407,7 @@ const levels = [
     settings: {
       id: "HKEBKCEBHJN",
       totalLevels: 6,
-      title: "PRÁCTICA",
+      title: "PRACTICE",
       number: 0,
       time: "",
       corrects: 0,
@@ -418,7 +416,7 @@ const levels = [
     levels: [
       {
         id: 1,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "You won't go to the party ____ they don't invite you",
         options: [
           {
@@ -445,7 +443,7 @@ const levels = [
       },
       {
         id: 2,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "_____ succes if she try hard",
         options: [
           {
@@ -472,7 +470,7 @@ const levels = [
       },
       {
         id: 3,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "____ I pass the exan, I ____ celebrate",
         options: [
           {
@@ -499,8 +497,8 @@ const levels = [
       },
       {
         id: 4,
-        type: "términos pareados",
-        description: "Une las oraciones",
+        type: "match the sentences",
+        description: "",
         options: [
           {
             state: "unselect",
@@ -526,27 +524,26 @@ const levels = [
       },
       {
         id: 5,
-        type: "Alternativa múltiple",
-        description:
-          "¿Cuál de las siguientes oraciones está redactada correctamente?",
+        type: "Multiple Choice",
+        description: "What will you do ____ you get your dream job?",
         options: [
           {
-            text: "If I won't feel sick, I will go tomorrow",
+            text: "If",
+            isCorrect: true,
+            state: "unselect",
+          },
+          {
+            text: "When",
             isCorrect: false,
             state: "unselect",
           },
           {
-            text: "If I don't feel sick, I go tomorrow",
+            text: "were",
             isCorrect: false,
             state: "unselect",
           },
           {
-            text: "I don't feel sick, I will go tomorrow",
-            isCorrect: false,
-            state: "unselect",
-          },
-          {
-            text: "If I don't feel sick, I will go tomorrow",
+            text: "Will",
             isCorrect: true,
             state: "unselect",
           },
@@ -554,7 +551,7 @@ const levels = [
       },
       {
         id: 6,
-        type: "Alternativa múltiple",
+        type: "Multiple Choice",
         description: "_____ he do if he runs out of time?",
         options: [
           {
@@ -580,7 +577,7 @@ const levels = [
         ],
       },
     ],
-  }
+  },
   // {
   //   settings: {
   //     id: "BQIHD",
@@ -594,7 +591,7 @@ const levels = [
   //   levels: [
   //     {
   //       id: 1,
-  //       type: "Alternativa múltiple",
+  //       type: "Multiple Choice",
   //       description: "You won't go to the party ____ they don't invite you",
   //       options: [
   //         {

@@ -5,11 +5,11 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   width: calc(100% - 2rem);
   height: 10vh;
   min-height: 2.5rem;
-  max-height: 4.5rem;
+  max-height: 4rem;
   background-color: var(--secondary-color);
   border-radius: 16px;
   color: var(--main-color);
@@ -20,7 +20,7 @@
 .primary {
   font-weight: 600;
   background-color: var(--secondary-color);
-  bottom: calc(10vh + 2rem);
+  bottom: calc(5.5rem);
 }
 
 .secundary {

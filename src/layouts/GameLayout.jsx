@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@styles/gameLayout.module.css";
 import Victory from "@containers/Victory";
 import Layout from "./Layout";
+import ProgressVar from "@components/ProgressVar";
 
 const GameLayout = ({ children, settings }) => {
   const layout = settings.isFinalGame
@@ -14,14 +15,7 @@ const GameLayout = ({ children, settings }) => {
           <Victory settings={settings.others} id={settings.levelId} />
         ) : (
           <div className={styles["game-container"]}>
-            <div className={styles["progress-var"]}>
-              <div
-                style={{ width: `${settings.progress}%` }}
-                className={styles["progress"]}
-              >
-                <div className={styles["progress-decoration"]}></div>
-              </div>
-            </div>
+            <ProgressVar type={"levels"} progress={settings.progress}/>
             {children}
           </div>
         )}

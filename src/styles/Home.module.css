@@ -53,5 +53,5 @@
 
 
 .levelCompleted:hover, .levelIncompleted:hover{
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.759);
+  background-color: gray;
 }
