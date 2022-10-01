@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "@styles/progressvar.module.css";
 
-const ProgressVar = ({ progress, type, cb }) => {
-  let progressWidth = type === "levels" ? progress : cb();
+const ProgressVar = ({ progress, type }) => {
   return (
     <div className={styles[type]}>
       <div
-        style={{ width: `${progressWidth}%` }}
+        style={{ width: `${progress}%` }}
         className={styles["progress"]}
       >
         <div className={styles["progress-decoration"]}></div>

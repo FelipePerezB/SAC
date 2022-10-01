@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import styles from "@styles/multipleChoice.module.css";
 import AppContext from "context/appContext";
-const MultipleChoice = ({ settings, levelSettings }) => {
+const MultipleChoice = ({ settings, levelSettings, type }) => {
   const [options, setOptions] = useState(settings);
-  const { addError, addCorrect } = useContext(AppContext);
+  const { addError, addCorrect, addTime } = useContext(AppContext);
+  const TIME_TO_ADD = 5;
+  const TIME_TO_REMOVE = TIME_TO_ADD * -1;
 
   const changeState = (text, newState) => {
     setOptions(
@@ -26,20 +28,28 @@ const MultipleChoice = ({ settings, levelSettings }) => {
     if (op.isCorrect) {
       changeState(op.text, "correct");
       setTimeout(() => {
-        addCorrect(levelSettings.id);
+        if (type === "normal" || type === "tutorial") {
+          addCorrect(levelSettings.id);
+        } else if (type === "practice") {
+          addTime(TIME_TO_ADD);
+        }
       }, 500);
     } else {
       changeState(op.text, "incorrect");
       setTimeout(() => {
         changeState(op.text, "unselect");
       }, 300);
-      addError(levelSettings.id);
+      if (type === "normal") {
+        addError(levelSettings.id);
+      } else if (type === "practice") {
+        addTime(TIME_TO_REMOVE);
+      }
     }
   };
 
   return (
     <>
-      <div className={styles["options"]}>
+      <div className={styles[type]}>
         {options?.map((op) => {
           return (
             <span

@@ -17,6 +17,11 @@
   text-align: center;
 }
 
+.primary:hover, .secundary:hover{
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.237);
+}
+
 .primary {
   font-weight: 600;
   background-color: var(--secondary-color);

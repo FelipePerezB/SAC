@@ -12,7 +12,7 @@ const GameLayout = ({ children, settings }) => {
     <>
       <Layout type={layout}>
         {settings.isFinalGame ? (
-          <Victory settings={settings.others} id={settings.levelId} />
+          <Victory title={"LEVEL COMPLETED!"} stats={settings.stats} id={settings.levelId} />
         ) : (
           <div className={styles["game-container"]}>
             <ProgressVar type={"levels"} progress={settings.progress}/>

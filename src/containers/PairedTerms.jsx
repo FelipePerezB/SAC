@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "@styles/pairedTerms.module.css";
 import AppContext from "context/appContext";
-const PairedTerms = ({ settings, levelSettings }) => {
-  const { addError, addCorrect } = useContext(AppContext);
+const PairedTerms = ({ type, settings, levelSettings }) => {
+  const { addError, addCorrect, addTime } = useContext(AppContext);
   const [answers, setAnswers] = useState([]);
   const [options, setOptions] = useState(settings);
   const [pair, setPair] = useState({
     answer: null,
     option: null,
   });
+
+  const TIME_TO_ADD = 10;
+  const TIME_TO_REMOVE = -3;
 
   const shuffle = (array) => {
     var currentIndex = array.length,
@@ -31,7 +34,11 @@ const PairedTerms = ({ settings, levelSettings }) => {
           if (e[array_key] === pair[pair_key] && e.state !== "correct") {
             if (newState === "incorrect" && array_key === "answer") {
               setTimeout(() => {
-                addError(levelSettings.id);
+                if (type === "normal") {
+                  addError(levelSettings.id);
+                } else if (type === "practice") {
+                  addTime(TIME_TO_REMOVE);
+                }
               });
             }
             return {
@@ -90,7 +97,11 @@ const PairedTerms = ({ settings, levelSettings }) => {
           const win = options.filter((e) => e.state !== "correct");
           if (win.length <= 1) {
             setTimeout(() => {
-              addCorrect(levelSettings.id);
+              if (type === "normal" || type === "tutorial") {
+                addCorrect(levelSettings.id);
+              } else if (type === "practice") {
+                addTime(TIME_TO_ADD);
+              }
             }, 500);
           }
         });
@@ -119,7 +130,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
 
   return (
     <>
-      <div className={styles["table"]}>
+      <div className={styles[type]}>
         <div className={styles["options"]}>
           {options.map((op) => {
             return (
@@ -133,7 +144,7 @@ const PairedTerms = ({ settings, levelSettings }) => {
             );
           })}
         </div>
-        <div className={styles["answers"]}>
+        <div className={styles["options"]}>
           {answers.map((ans) => {
             return (
               <span

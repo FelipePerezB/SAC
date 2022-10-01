@@ -3,6 +3,10 @@ import { useState } from "react";
 import levels from "./useGetLevels";
 
 const initialState = {
+  practice: {
+    addedTime: 0,
+    levels: {},
+  },
   completedLevels: [],
   levels: levels,
   user: {
@@ -18,6 +22,43 @@ const useInitialState = () => {
     seconds: 0,
     minutes: 0,
   });
+
+  const addTime = (time) => {
+    const isCorrect = time > 0 ? true : false;
+    const level = state.practice.levels.settings;
+    setState({
+      ...state,
+      user: {
+        ...state.user,
+        lives: (isCorrect) ? state.user.lives + 1 : state.user.lives
+      },
+      practice: {
+        ...state.practice,
+        addedTime: state.practice.addedTime + time,
+        levels: {
+          ...state.practice.levels,
+          settings: {
+            ...state.practice.levels.settings,
+            number: isCorrect ? level.number + 1 : level.number,
+            errors: isCorrect ? level.errors : level.errors + 1,
+            corrects: isCorrect ? level.corrects + 1 : level.corrects,
+          },
+        },
+      },
+    });
+  };
+
+  const setPracticeLevels = (newLevels) => {
+    setState({
+      ...state,
+      practice: {
+        ...state.practice,
+        addedTime:0,
+        levels: newLevels,
+      },
+    });
+  };
+
   const changeLevel = (levelId) => {
     setTimeout(() => {
       setState({
@@ -104,7 +145,7 @@ const useInitialState = () => {
             settings: {
               ...level.settings,
               corrects: (level.settings.corrects += 1),
-              number: level.settings.number += 1
+              number: (level.settings.number += 1),
             },
           };
         } else {
@@ -122,7 +163,7 @@ const useInitialState = () => {
         ...state,
         user: {
           ...state.user,
-          lives: (state.user.lives += lives - 1),
+          lives: (state.user.lives + lives),
         },
       });
     });
@@ -132,8 +173,7 @@ const useInitialState = () => {
       setState({
         ...state,
         user: {
-          ...state.user.lives,
-          lives: initialState.user.lives,
+          ...state.user,
           navarState: "home",
         },
         levels: state.levels.map((level) => {
@@ -173,6 +213,8 @@ const useInitialState = () => {
   return {
     state,
     setState,
+    addTime,
+    setPracticeLevels,
     changeLevel,
     setCompleteLevel,
     addError,

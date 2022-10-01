@@ -5,7 +5,7 @@
     font-size: 1.2rem;
 }
 
-.options{
+.normal, .practice, .tutorial{
     max-width: 22rem;
     margin: 2rem auto;
     display: flex;
@@ -37,7 +37,7 @@
     font-weight: 500;
 }
 
-.options *:hover{
+.normal *:hover, .practice *:hover, .tutorial *:hover{
     cursor: pointer;
 }
 
@@ -45,10 +45,13 @@
     background-color: var(--inactive-color);
 }
 
-
 .incorrect{
     background-color: var(--incorrect);
     transition: background-color 0.3s;
+}
+
+.practice .correct{
+    background-color: #1485D8;
 }
 
 .correct{

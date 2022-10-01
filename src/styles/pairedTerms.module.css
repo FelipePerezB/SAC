@@ -1,18 +1,4 @@
-.question{
-    /* margin: 4vh 0; */
-    text-align: center;
-    color: white;
-    font-size: 1.2rem;
-}
-
-.game-container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.table{
+.normal, .practice, .tutorial{
     margin: auto;
     padding: 2rem 0;
     gap: 1rem;
@@ -22,7 +8,7 @@
     font-weight: 500;
 }
 
-.table .options, .table .answers{
+.options{
     height: 100%;
     width: 100%;
     display: flex;
@@ -47,26 +33,29 @@
     justify-content: center;
 }
 
-.table span{
+.normal span, .practice span, .tutorial span{
     transition: background-color 0.5s;
     cursor: pointer;
 }
 
-.table .unselect:hover{
-    /* background-color: lightgray; */
+.unselect{
     transition: background-color 1s;
 }
 
-.table .incorrect{
+.incorrect{
     background-color: var(--incorrect);
     transition: background-color 300ms ease-in;
 }
 
-.table .correct{
+.correct{
     transition: background-color 0.3s;
     background-color: var(--correct);
 }
 
-.table .select{
+.practice .correct{
+    background-color: #1485D8;
+}
+
+.normal .select, .practice .select, .tutorial .select{
     background-color: gray;
 }

@@ -31,8 +31,10 @@ h2{
   font-size: 2rem;
 }
 
-
-
+p{
+  color: var(--inactive-color);
+  text-align: center;
+}
 
 html,
 body {

@@ -8,12 +8,8 @@
     overflow: hidden;
 }
 
-.practice{
-    width: calc(100% - 5rem);
-}
-
 .progress{
-    transition: width 1s ease-out;
+    transition: width 1s;
     width: 0%;
     height: 100%;
     background-color: var(--secondary-color);
@@ -22,8 +18,4 @@
 
 .practice .progress{
     background-color: #1485D8;
-}
-
-.progress-decoration{
-    background-color: white;
 }

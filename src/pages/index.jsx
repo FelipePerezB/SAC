@@ -13,7 +13,7 @@ export default function Main() {
       <title>Home | SAC</title>
     </Head>
     <Layout>
-      {state.user.navarState === "home" ? <Home /> : <Practice />}
+      {state.user.navarState === "home" ? <Home /> : <Practice completedLevels={state.completedLevels} />}
     </Layout>
     </>
   );

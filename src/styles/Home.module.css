@@ -50,8 +50,3 @@
   background-color: var(--main-color);
   border-radius: 16px;
 }
-
-
-.levelCompleted:hover, .levelIncompleted:hover{
-  background-color: gray;
-}

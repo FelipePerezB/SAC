@@ -2,22 +2,23 @@ import AppContext from "context/appContext";
 import { useRouter } from "next/router";
 import styles from "@styles/victory.module.css";
 import React, { useContext, useEffect, useState } from "react";
+import Button from "@components/Button";
 
-const Victory = ({ id, settings }) => {
+const Victory = ({ id, stats, title }) => {
   const { setCompleteLevel, setTimer } = useContext(AppContext);
   const [time, setTime] = useState("");
   useEffect(() => {
     setTimeout(() => setTime(setTimer(id)));
-  });
+  }, []);
   const router = useRouter();
 
   const completeLevel = () => {
-    setCompleteLevel(id);
     router.push("/");
+    setCompleteLevel(id);
   };
   return (
     <div className={styles["container"]}>
-      <h2 onClick={() => completeLevel()}>LEVEL COMPLETED!</h2>
+      <h2 onClick={() => completeLevel()}>{title}</h2>
       <div className={styles["video-container"]}>
         <video autoPlay loop>
           <source src="/victory.mp4" />
@@ -25,32 +26,26 @@ const Victory = ({ id, settings }) => {
         </video>
       </div>
       <div className={styles["stats"]}>
-        <div>
-          <span className={styles["errors"]}>
-            <span className={styles["text"]}>ERRORS</span>
-            <span className={styles["number"]}>{settings.errors}</span>
-          </span>
-          <span className={styles["corrects"]}>
-            <span className={styles["text"]}>CORRECTS</span>
-            <span className={styles["number"]}>{settings.corrects}</span>
-          </span>
-        </div>
-        <span className={styles["time"]}>
-          <span className={styles["text"]}>TIME</span>
-          <span className={styles["number"]}>{time}</span>
-        </span>
+        {stats?.map((stat) => {
+          if (stat.type === "time" && !stat.value) {
+            stat.value = time;
+          }
+          return (
+            <>
+              <span className={styles[stat.type]}>
+                <span className={styles["text"]}>
+                  {stat.type.toUpperCase()}
+                </span>
+                <span className={styles["number"]}>{stat.value}</span>
+              </span>
+            </>
+          );
+        })}
       </div>
-      <div
-        onClick={() => {
-          completeLevel();
-        }}
-        className={styles["button"]}
-      >
-        <span>Continue</span>
-      </div>
+      <Button text={"Continue"} type="primary" callback={completeLevel} />
     </div>
   );
 };
 
 export default Victory;
-//
+

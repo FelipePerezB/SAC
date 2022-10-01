@@ -4,21 +4,21 @@ import React, { useContext } from "react";
 import styles from "@styles/getLifes.module.css";
 import Image from "next/image";
 import duck from "@assets/duck-crying.jpeg";
-import AppContext from "context/appContext";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import AppContext from "context/appContext";
 
 const GetLifes = () => {
-  const { addLives } = useContext(AppContext);
+  const { changeNavState } = useContext(AppContext);
   const router = useRouter();
   const getLives = () => {
-    addLives(5);
     router.push("/");
+    changeNavState("add-lifes");
   };
   return (
     <>
       <Head>
-        <title>Get Lives | SAC</title>
+        <title>Get Lifes | SAC</title>
       </Head>
       <Layout type="layout-without-ui">
         <div className={styles["container"]}>
@@ -31,12 +31,7 @@ const GetLifes = () => {
             callback={getLives}
             text={"Get More Lifes"}
           />
-          <Button
-            type={"secundary"}
-            action={"link"}
-            url={"/"}
-            text={"Home"}
-          />
+          <Button type={"secundary"} action={"link"} url={"/"} text={"Home"} />
         </div>
       </Layout>
     </>

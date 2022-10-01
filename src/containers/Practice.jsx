@@ -1,15 +1,13 @@
+import Button from "@components/Button";
 import React from "react";
 
-const Practice = () => {
+const Practice = ({ completedLevels }) => {
   return (
     <>
       <h1>PRACTICE MODE</h1>
-      <h2>COMING SOON</h2>
-      {/* <Button
-        text={"Play"}
-        type="primary"
-        url={"/Practice"}
-      /> */}
+      {completedLevels.length > 0 ? (
+        <Button text={"Play"} type="primary" url={"/Practice"} />
+      ) : <p>Complete a level for unlock this mode.</p>}
     </>
   );
 };

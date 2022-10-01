@@ -1,6 +1,7 @@
 const levels = [
   {
     settings: {
+      type:"tutorial",
       id: "HAGWUY",
       totalLevels: 7,
       title: "INTRODUCTION",
@@ -11,7 +12,7 @@ const levels = [
     },
     levels: [
       {
-        id: 1,
+        id: 171389,
         type: "Multiple Choice",
         description: "If everyone agrees, ____ go to France next month",
         options: [
@@ -38,7 +39,7 @@ const levels = [
         ],
       },
       {
-        id: 2,
+        id: 12137,
         type: "match the sentences",
         description: "",
         options: [
@@ -65,7 +66,7 @@ const levels = [
         ],
       },
       {
-        id: 3,
+        id: 18378,
         type: "Multiple Choice",
         description: "If the plane is delayed ______",
         options: [
@@ -92,7 +93,7 @@ const levels = [
         ],
       },
       {
-        id: 4,
+        id: 187389,
         type: "Multiple Choice",
         description: "If you invite me, I will ____",
         options: [
@@ -119,7 +120,7 @@ const levels = [
         ],
       },
       {
-        id: 5,
+        id: 138789,
         type: "Multiple Choice",
         description: "If I have time, ___ will study maths",
         options: [
@@ -146,7 +147,7 @@ const levels = [
         ],
       },
       {
-        id: 6,
+        id: 137973,
         type: "Multiple Choice",
         description: "If we ____ hurry we'll be late",
         options: [
@@ -173,7 +174,7 @@ const levels = [
         ],
       },
       {
-        id: 7,
+        id: 319830,
         type: "Multiple Choice",
         description: "If Max asks for the truth, I _____ what happend",
         options: [
@@ -203,6 +204,7 @@ const levels = [
   },
   {
     settings: {
+      type:"normal",
       id: "HUAHDUIHW",
       totalLevels: 7,
       title: "NEGATIVE AND INTERROGATIVE",
@@ -213,7 +215,7 @@ const levels = [
     },
     levels: [
       {
-        id: 1,
+        id: 18390,
         type: "Multiple Choice",
         description: "If you ____ like the design, I will change it",
         options: [
@@ -240,7 +242,7 @@ const levels = [
         ],
       },
       {
-        id: 2,
+        id: 89378,
         type: "Multiple Choice",
         description: "If it's too cold, Brian _____ go outside",
         options: [
@@ -267,7 +269,7 @@ const levels = [
         ],
       },
       {
-        id: 3,
+        id: 13809,
         type: "Multiple Choice",
         description: "Who ____ be my manager if you resign?",
         options: [
@@ -294,7 +296,7 @@ const levels = [
         ],
       },
       {
-        id: 4,
+        id: 13983,
         type: "match the sentences",
         description: "",
         options: [
@@ -321,7 +323,7 @@ const levels = [
         ],
       },
       {
-        id: 5,
+        id: 8310,
         type: "Multiple Choice",
         description: "_______ you do if you win the lottery?",
         options: [
@@ -348,7 +350,7 @@ const levels = [
         ],
       },
       {
-        id: 6,
+        id: 3108,
         type: "Multiple Choice",
         description: "I _____ answer If you call",
         options: [
@@ -375,7 +377,7 @@ const levels = [
         ],
       },
       {
-        id: 7,
+        id: 3129,
         type: "Multiple Choice",
         description: "_____ cry if she watches this movie?",
         options: [
@@ -405,6 +407,7 @@ const levels = [
   },
   {
     settings: {
+      type:"normal",
       id: "HKEBKCEBHJN",
       totalLevels: 6,
       title: "PRACTICE",
@@ -590,7 +593,7 @@ const levels = [
   //   },
   //   levels: [
   //     {
-  //       id: 1,
+  //       id: 37280,
   //       type: "Multiple Choice",
   //       description: "You won't go to the party ____ they don't invite you",
   //       options: [

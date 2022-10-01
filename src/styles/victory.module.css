@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    padding: 1rem 1rem 7rem;
+    padding: 1rem 1rem 16rem;
 }
 
 .container h2{
@@ -33,22 +33,23 @@
 }
 
 .stats{
+    margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
-    align-items: center;
+    justify-content: center;
     width: 100%;
     height: max-content;
 }
 
-.stats > div{
+/* .stats > div{
     width: 100%;
     display: flex;
     gap: 1rem;
     justify-content: space-between;
-}
+} */
 
-.stats > span, .stats > div > span{
+.stats > span{
     padding: 0.5rem;
     color: white;
     display: flex;
@@ -56,7 +57,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    width: 40vw;
+    width: 45%;
     max-width: 14rem;
     height: 8vh;
     min-height: 3.5rem;
@@ -77,22 +78,4 @@
 
 .time{
     background-color: #1485D8;
-}
-
-.button{
-    max-width: 24rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 2rem;
-    width: calc(100% - 2rem);
-    height: 10vh;
-    min-height: 2.5rem;
-    max-height: 4.5rem;
-    background-color: var(--secondary-color);
-    border-radius: 16px;
-    color: var(--main-color);
-    font-size: 2rem;
-    text-align: center;
 }
