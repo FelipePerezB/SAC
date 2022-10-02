@@ -583,6 +583,7 @@ const levels = [
   },
   // {
   //   settings: {
+  //     type:"normal",
   //     id: "BQIHD",
   //     totalLevels: 1,
   //     title: "TEST",

@@ -1,4 +1,4 @@
-.layout, .layout-without-ui, .layout-without-nav{
+.normal, .layout-without-ui, .layout-without-nav, .tutorial{
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
@@ -17,12 +17,12 @@
     display: none;
 }
 
-.layout-without-nav{
+.layout-without-nav, .tutorial{
     padding:  calc(var(--infovar-heigh) + 2rem) 1rem 1rem;
     justify-content: space-between;
 }
 
-.layout-without-nav nav{
+.layout-without-nav nav, .tutorial nav{
     display: none;
 }
 

@@ -32,7 +32,7 @@ const Exercise = () => {
         <title>Level | SAC</title>
       </Head>
       <GameLayout
-        type="level"
+        type={games?.settings.type}
         settings={{
           stats: [
             {

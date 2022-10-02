@@ -13,8 +13,8 @@ const Victory = ({ id, stats, title }) => {
   const router = useRouter();
 
   const completeLevel = () => {
-    router.push("/");
     setCompleteLevel(id);
+    router.push("/");
   };
   return (
     <div className={styles["container"]}>

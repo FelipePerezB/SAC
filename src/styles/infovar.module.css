@@ -1,4 +1,4 @@
-.infovar, .game-infovar{
+.normal, .game-infovar, .tutorial, .layout-without-nav{
     display: flex;
     justify-content: center;
     position: fixed;
@@ -43,6 +43,10 @@
 
 .avatar img{
     transform: scale(0.9);
+}
+
+.tutorial .lives{
+    display: none;
 }
 
 .lives{
